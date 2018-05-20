@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "max-len": ["error", { "code": 100, "ignoreComments": true }]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "plugins": [
+    "mocha",
+    "chai-friendly"
+  ],
+  "rules": {
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "max-len": ["error", { "code": 100, "ignoreComments": true }],
+    "mocha/no-exclusive-tests": "error",
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2
+  }
+}

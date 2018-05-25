@@ -7,7 +7,7 @@ const QUESTIONS = [
     validate(value) {
       // with "===" does not work corectly
       // eslint-disable-next-line
-      if (value >= 0 && Math.floor(value) == value) {
+      if (value > 0 && Math.floor(value) == value) {
         return true;
       }
       return "You need to provide a number that's an integer and it's equal or grather than 2.";
@@ -20,7 +20,7 @@ const QUESTIONS = [
     default: '40000',
     validate(value) {
       // eslint-disable-next-line
-      if (value >= 0 && Math.floor(value) == value) {
+      if (value > 0 && Math.floor(value) == value) {
         return true;
       }
       return "You need to provide a number that's an integer and it's equal or grather than 2.";
@@ -54,4 +54,13 @@ const FILTER_OPTIONS = questionAboutFilters.choices;
 const [questionAboutPalindromeType] = QUESTIONS.filter(question => question.name === 'selectedPalindromeTypes');
 const PALINDROME_TYPES = questionAboutPalindromeType.choices;
 
-export { FILTER_OPTIONS, PALINDROME_TYPES, QUESTIONS };
+const [questionAboutValueOne] = QUESTIONS.filter(question => question.name === 'valueOne');
+const [questionAboutValueTwo] = QUESTIONS.filter(question => question.name === 'valueTwo');
+
+export {
+  FILTER_OPTIONS,
+  PALINDROME_TYPES,
+  QUESTIONS,
+  questionAboutValueOne,
+  questionAboutValueTwo,
+};

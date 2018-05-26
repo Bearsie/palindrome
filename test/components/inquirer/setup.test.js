@@ -19,16 +19,15 @@ const simulatedDefaultAnswers = {
 const simulatedAnswers = simulatedDefaultAnswers;
 const isIncludedIn = options => selected => options.includes(selected);
 
-describe('Enquirer', () => {
+describe('Inquirer', () => {
+  it('should prompt only 5 questions.', () => {
+    expect(QUESTIONS.length).to.equal(5);
+  });
+
+  it('should prompt questions, that match with answers.', () => {
+    expect(simulatedAnswers).to.have.all.keys(...questionsNames);
+  });
   describe('Questions:', () => {
-    it('should prompt only 5 questions.', () => {
-      expect(QUESTIONS.length).to.equal(5);
-    });
-
-    it('should prompt questions, that match with simulated answers.', () => {
-      expect(questionsNames).to.deep.equal(Object.keys(simulatedAnswers));
-    });
-
     describe('about defining the range of numbers should validate the input:', () => {
       const numberToValidation = 2;
 

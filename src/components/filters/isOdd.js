@@ -10,7 +10,4 @@
  * @param {AllowedNumber} number - number to check.
  * @returns {boolean} 'true' if given number is odd, 'false' otherwise.
  */
-export default (number) => {
-  if (number % 2) return true;
-  return false;
-};
+export default (number) => !!(number % 2);

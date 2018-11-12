@@ -5,7 +5,7 @@
  * @param {function[]} allFunctions - All possible functions that can be applied.
  * @returns {function}
  */
-export default allFunctions =>
+export default (allFunctions) =>
   /**
    * @param {boolean[]} selectionStatuses - Contains statuses of selection,
    * 'true' means that option was selected, 'false' means that option was not selected.

@@ -6,12 +6,13 @@
  * @returns {boolean} 'true' if given value is palindrome, 'false' otherwise.
  */
 export default (value) => {
-  const strigified = typeof value === 'string' ? value : String(value);
+  const strigified = typeof value === 'string'
+    ? value
+    : String(value);
   const reversed = strigified
     .split('')
     .reverse()
     .join('');
 
-  if (strigified === reversed) return true;
-  return false;
+  return strigified === reversed;
 };

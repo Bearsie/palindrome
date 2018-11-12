@@ -39,7 +39,7 @@ import getFiltersToApply from './getFiltersToApply';
  * @param {EnquirerOptions} constantData - Selection options specified for enquirer.
  * @returns {function}
  */
-export default constantData =>
+export default (constantData) =>
   /**
    * @param {EnquirerAnswers} inputedData - Data that comes from enquirer, containing values provided by user.
    * @returns {PalindromeInputs} - Object containing inputs for palindromes calculation.

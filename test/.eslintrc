@@ -2,7 +2,7 @@
   "extends": "airbnb",
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module",
+    "sourceType": "module"
   },
   "env": {
     "es6": true,
@@ -15,9 +15,11 @@
   ],
   "rules": {
     "no-use-before-define": ["error", { "functions": false, "classes": true }],
-    "max-len": ["error", { "code": 100, "ignoreComments": true }],
+    "max-len": ["error", { "code": 120, "ignoreComments": true }],
+    "arrow-parens": ["error", "always"],
     "mocha/no-exclusive-tests": "error",
     "no-unused-expressions": 0,
-    "chai-friendly/no-unused-expressions": 2
+    "chai-friendly/no-unused-expressions": 2,
+    "linebreak-style": 0
   }
 }

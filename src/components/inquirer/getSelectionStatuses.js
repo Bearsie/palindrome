@@ -7,4 +7,4 @@
  * @returns {boolean[]} - Representation of selected options,
  * 'true' means that option was selected, 'false' means that option was not selected.
  */
-export default options => selection => options.map(option => selection.includes(option));
+export default (options) => (selection) => options.map((option) => selection.includes(option));

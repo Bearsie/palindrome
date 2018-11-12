@@ -48,14 +48,14 @@ const QUESTIONS = [
   },
 ];
 
-const [questionAboutFilters] = QUESTIONS.filter(question => question.name === 'selectedFilters');
+const [questionAboutFilters] = QUESTIONS.filter((question) => question.name === 'selectedFilters');
 const FILTER_OPTIONS = questionAboutFilters.choices;
 
-const [questionAboutPalindromeType] = QUESTIONS.filter(question => question.name === 'selectedPalindromeTypes');
+const [questionAboutPalindromeType] = QUESTIONS.filter((question) => question.name === 'selectedPalindromeTypes');
 const PALINDROME_TYPES = questionAboutPalindromeType.choices;
 
-const [questionAboutValueOne] = QUESTIONS.filter(question => question.name === 'valueOne');
-const [questionAboutValueTwo] = QUESTIONS.filter(question => question.name === 'valueTwo');
+const [questionAboutValueOne] = QUESTIONS.filter((question) => question.name === 'valueOne');
+const [questionAboutValueTwo] = QUESTIONS.filter((question) => question.name === 'valueTwo');
 
 export {
   FILTER_OPTIONS,

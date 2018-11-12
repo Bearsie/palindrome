@@ -47,7 +47,8 @@ describe('Inquirer', () => {
     });
 
     it('should pass selectedPalindromeTypes without any convertion,', () => {
-      expect(evaluatedData.selectedPalindromeTypes).to.deep.equal(inputedDataToEvaluate.selectedPalindromeTypes);
+      expect(evaluatedData.selectedPalindromeTypes)
+        .to.deep.equal(inputedDataToEvaluate.selectedPalindromeTypes);
     });
 
     it('should convert calcPatern expresion into function,', () => {

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Finding palindrome for given range of numbers",
   "main": "dist/index.js",
+  "repository": "https://github.com/Bearsie/palindrome.git",
   "scripts": {
     "build": "trash dist && babel src -d dist",
     "run:app": "node dist/index.js",

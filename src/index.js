@@ -7,11 +7,10 @@ import { logWelcomeMessage, logResultMessage } from './components/view/logMessag
 
 logWelcomeMessage();
 
-(async () => {
-  const possibleChoices = { FILTER_OPTIONS, FILTER_FUNCTIONS };
-  const inputedData = await inquirer.prompt(QUESTIONS);
+(async (questions, possibleChoices) => {
+  const inputedData = await inquirer.prompt(questions);
   const data = evaluateAnswers(possibleChoices)(inputedData);
   const palindromeComputations = computePalindromes(data);
 
   palindromeComputations.map((computation) => logResultMessage(computation));
-})();
+})(QUESTIONS, { FILTER_OPTIONS, FILTER_FUNCTIONS });

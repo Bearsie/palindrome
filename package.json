@@ -1,15 +1,20 @@
 {
   "name": "palindrome",
   "version": "1.0.0",
-  "description": "Finding palindrome",
-  "main": "index.js",
+  "description": "Finding palindrome for given range of numbers",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "babel-node src/index.js",
-    "test": "mocha  --recursive --require babel-core/register"
+    "build": "trash dist && babel src -d dist",
+    "run:app": "node dist/index.js",
+    "start": "yarn build && yarn run:app",
+    "test": "mocha --recursive --require babel-core/register",
+    "watch": "trash dist && babel src --watch -d dist"
   },
   "author": "Wojciech Niedzwiedz",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -19,11 +24,10 @@
     "eslint-plugin-mocha": "^5.0.0",
     "eslint-plugin-react": "^7.4.0",
     "mocha": "^5.2.0",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "trash-cli": "1.4.0"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "chalk": "^2.4.1",
     "clear": "^0.1.0",
     "figlet": "^1.2.0",

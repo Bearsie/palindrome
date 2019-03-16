@@ -2,6 +2,7 @@
   "name": "palindrome",
   "version": "1.0.0",
   "description": "Finding palindrome for given range of numbers",
+  "keywords": ["palindrome", "functional programming", "jsdoc"],
   "main": "dist/index.js",
   "repository": "https://github.com/Bearsie/palindrome.git",
   "scripts": {
